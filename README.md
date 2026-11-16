@@ -1,0 +1,4 @@
+## Decision log ill keep on updating every few commits:
+- I decided to use flask instead of FastAPI just because I wanted to use a simpler framework, I might go and change it to FastAPI if I have trouble implementing my own input validation.
+- I decided for the case of link collision, if two links produce the same N characters of SHA-256 encoding, I'll add a count to the url and hash again. Possibly meaning ill prepend/append a counter to the link that collides, as I researched this changes the entire output, rather than what I previously thought just changes/adds 1 character to the output.
+- Q: Should the redirect send users straight into the url they typed? A: I don't think so as long as the redirect sends them back specifically to the page they want. Plus the url normalization wont touch too many things before the path, so queries and the path will still remain a specific link within the database.
